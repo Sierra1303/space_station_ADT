@@ -1490,3 +1490,32 @@
     count: 4 #60 heat damage if you hit all your shots, but narrower spread
     spread: 10
 # ADT-Tweak-end
+# ADT-Tweak-start
+- type: entity
+  parent: BaseBulletIncendiary
+  id: ADTPelletFire
+  name: pellet (ball, incendiary)
+  components:
+  # ADT-Tweak-Start
+  - type: Sprite
+    sprite: ADT/Objects/Weapons/Guns/Projectiles/shotgun-ammo.rsi
+    layers:
+    - state: buckshot-incendiary
+  # ADT-Tweak-End
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Blunt: 10
+        Heat: 10
+  - type: IgniteOnCollide
+    fireStacks: 1
+    count: 10
+  - type: DamageOnCollide
+    inverted: true # fuck you wrath components!
+    damage:
+      types:
+        Heat: 0.4
+  - type: TimedDespawn
+    lifetime: 0.25
+# ADT-Tweak-end

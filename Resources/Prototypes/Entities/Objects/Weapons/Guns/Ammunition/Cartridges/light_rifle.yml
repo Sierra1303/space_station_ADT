@@ -73,3 +73,13 @@
       - state: tip
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#65fe08"
+ # ADT-Tweak-Start
+- type: entity
+  parent: BaseCartridgeLightRifle
+  id: CartridgeLightRifle1
+  name: cartridge (.30 rifle)
+  description: A classic intermediate cartridge used by many combat rifles and LMGs. Standard kinetic ammunition is common and useful in most situations.
+  components:
+  - type: CartridgeAmmo
+    proto: ADTPelletFire
+ # ADT-Tweak-end

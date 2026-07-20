@@ -1477,3 +1477,4 @@
         Slash: 0.9 # 0.7 > 0.9
         Piercing: 0.95 # 0.6 > 0.95
         Heat: 0.9 # 0.6 > 0.9
+       # ADT tweak end
